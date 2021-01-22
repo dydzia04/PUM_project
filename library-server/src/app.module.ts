@@ -1,30 +1,14 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BookService } from './services/book/book.service';
-import { UserService } from './services/user/user.service';
-import { AuthorService } from './services/author/author.service';
-import { PublisherService } from './services/publisher/publisher.service';
-import { BookController } from './controllers/book/book.controller';
-import { UserController } from './controllers/user/user.controller';
-import { AuthorController } from './controllers/author/author.controller';
-import { PublisherController } from './controllers/publisher/publisher.controller';
+import { BookModule } from './resources/book/book.module';
+import { AuthorModule } from './resources/author/author.module';
+import { PublisherModule } from './resources/publisher/publisher.module';
+import { UserModule } from './resources/user/user.module';
 
 @Module({
-  imports: [],
-  controllers: [
-    AppController,
-    BookController,
-    UserController,
-    AuthorController,
-    PublisherController,
-  ],
-  providers: [
-    AppService,
-    BookService,
-    UserService,
-    AuthorService,
-    PublisherService,
-  ],
+  imports: [BookModule, AuthorModule, PublisherModule, UserModule],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
