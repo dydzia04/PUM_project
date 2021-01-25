@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faHome, faBoxOpen, faBook, faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-tabs',
@@ -6,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  home = faHome;
+  boxOpen = faBoxOpen;
+  book = faBook;
+  user = faUser;
 
   constructor() {}
 

@@ -1,1 +1,14 @@
+ion-tab-bar{
+  height: 5rem;
+  .tab-button {
+    fa-icon {
+      font-size: 24px;
+      padding-bottom: 0.25rem;
+    }
 
+    ion-label {
+      font-weight: bold;
+      font-size: 10px;
+    }
+  }
+}
