@@ -22,29 +22,41 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_AuthorModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="165,-70 165,-195 331,-195 331,-70 165,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="80.5,-70 80.5,-195 415.5,-195 415.5,-70 80.5,-70"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_AuthorModule_providers</title>
-<polygon fill="none" stroke="black" points="173,-78 173,-130 323,-130 323,-78 173,-78"/>
+<polygon fill="none" stroke="black" points="88.5,-78 88.5,-130 407.5,-130 407.5,-78 88.5,-78"/>
 </g>
 <!-- AuthorService -->
 <g id="node1" class="node">
 <title>AuthorService</title>
-<ellipse fill="#fdb462" stroke="black" cx="248" cy="-104" rx="67.19" ry="18"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">AuthorService</text>
+<ellipse fill="#fdb462" stroke="black" cx="332.5" cy="-104" rx="67.19" ry="18"/>
+<text text-anchor="middle" x="332.5" y="-99.8" font-family="Times,serif" font-size="14.00">AuthorService</text>
 </g>
 <!-- AuthorModule -->
-<g id="node2" class="node">
+<g id="node3" class="node">
 <title>AuthorModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="297.71,-187 294.71,-191 273.71,-191 270.71,-187 198.29,-187 198.29,-151 297.71,-151 297.71,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">AuthorModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="301.21,-187 298.21,-191 277.21,-191 274.21,-187 201.79,-187 201.79,-151 301.21,-151 301.21,-187"/>
+<text text-anchor="middle" x="251.5" y="-164.8" font-family="Times,serif" font-size="14.00">AuthorModule</text>
 </g>
 <!-- AuthorService&#45;&gt;AuthorModule -->
 <g id="edge1" class="edge">
 <title>AuthorService&#45;&gt;AuthorModule</title>
-<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
-<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
+<path fill="none" stroke="black" d="M283.13,-116.53C283.13,-116.53 283.13,-140.85 283.13,-140.85"/>
+<polygon fill="black" stroke="black" points="279.63,-140.85 283.13,-150.85 286.63,-140.85 279.63,-140.85"/>
+</g>
+<!-- DatabaseService -->
+<g id="node2" class="node">
+<title>DatabaseService</title>
+<ellipse fill="#fdb462" stroke="black" cx="171.5" cy="-104" rx="75.26" ry="18"/>
+<text text-anchor="middle" x="171.5" y="-99.8" font-family="Times,serif" font-size="14.00">DatabaseService</text>
+</g>
+<!-- DatabaseService&#45;&gt;AuthorModule -->
+<g id="edge2" class="edge">
+<title>DatabaseService&#45;&gt;AuthorModule</title>
+<path fill="none" stroke="black" d="M224.39,-116.84C224.39,-116.84 224.39,-140.52 224.39,-140.52"/>
+<polygon fill="black" stroke="black" points="220.89,-140.52 224.39,-150.52 227.89,-140.52 220.89,-140.52"/>
 </g>
 </g>
 </svg>

@@ -98,6 +98,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#create">create</a>
                             </li>
                             <li>
@@ -134,19 +135,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(dbService: <a href="../injectables/DatabaseService.html">DatabaseService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/resources/book/book.service.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/resources/book/book.service.ts:16</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Setting up connection to database</p>
+                            <div class="io-description"><p>Gets connection to database</p>
 </div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dbService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DatabaseService.html" target="_self" >DatabaseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -165,6 +192,7 @@
                     <a name="create"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Async</span>
                             create
                         </b>
                         <a href="#create"><span class="icon ion-ios-link"></span></a>
@@ -173,15 +201,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>create(createBookDto: <a href="../classes/CreateBookDto.html">CreateBookDto</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>create(createBookDto: <a href="../classes/CreateBookDto.html">CreateBookDto</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/resources/book/book.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/resources/book/book.service.ts:30</a></div>
                 </td>
             </tr>
 
@@ -220,7 +249,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <b>Returns : </b>    <code>{}</code>
 
                     </div>
                     <div class="io-description">
@@ -254,8 +283,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/resources/book/book.service.ts:41</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/resources/book/book.service.ts:39</a></div>
                 </td>
             </tr>
 
@@ -297,8 +326,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">src/resources/book/book.service.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/resources/book/book.service.ts:60</a></div>
                 </td>
             </tr>
 
@@ -371,8 +400,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="87"
-                            class="link-to-prism">src/resources/book/book.service.ts:87</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/resources/book/book.service.ts:85</a></div>
                 </td>
             </tr>
 
@@ -445,8 +474,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">src/resources/book/book.service.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/resources/book/book.service.ts:73</a></div>
                 </td>
             </tr>
 
@@ -534,7 +563,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/resources/book/book.service.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/resources/book/book.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -556,9 +585,8 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpException, HttpStatus, Injectable } from &#x27;@nestjs/common&#x27;;
 import { CreateBookDto } from &#x27;./dto/create-book.dto&#x27;;
 import { UpdateBookDto } from &#x27;./dto/update-book.dto&#x27;;
-import { GoogleData } from &#x27;../../google-data&#x27;;
-import firebase from &#x27;firebase-admin&#x27;;
 import { Firestore } from &#x27;@google-cloud/firestore&#x27;;
+import { DatabaseService } from &#x27;../../database/database.service&#x27;;
 
 /**
  * Service for book operations passed to controller
@@ -572,22 +600,21 @@ export class BookService {
   private database: Firestore;
 
   /**
-   * Setting up connection to database
+   * Gets connection to database
+   * @param dbService
    */
-  constructor() {
-    firebase.initializeApp({
-      credential: firebase.credential.cert(GoogleData.keyJsonFirestore),
-    });
-
-    this.database &#x3D; firebase.firestore();
+  constructor(private dbService: DatabaseService) {
+    this.database &#x3D; dbService.database;
   }
 
   /**
    * Method creating new book using given parameter
    * @param createBookDto
    */
-  create(createBookDto: CreateBookDto) {
-    return &#x27;This action adds a new book&#x27;;
+  async create(createBookDto: CreateBookDto) {
+    const book &#x3D; await this.database.collection(&#x27;books&#x27;).add(createBookDto);
+
+    return { created: book.id };
   }
 
   /**
@@ -648,8 +675,6 @@ export class BookService {
     } else {
       throw new HttpException(&#x27;NOT FOUND&#x27;, HttpStatus.NOT_FOUND);
     }
-
-    return null;
   }
 }
 </code></pre>

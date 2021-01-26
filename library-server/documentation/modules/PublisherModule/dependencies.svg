@@ -22,29 +22,41 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_PublisherModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="156,-70 156,-195 340,-195 340,-70 156,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="71.5,-70 71.5,-195 424.5,-195 424.5,-70 71.5,-70"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_PublisherModule_providers</title>
-<polygon fill="none" stroke="black" points="164,-78 164,-130 332,-130 332,-78 164,-78"/>
+<polygon fill="none" stroke="black" points="79.5,-78 79.5,-130 416.5,-130 416.5,-78 79.5,-78"/>
 </g>
-<!-- PublisherService -->
+<!-- DatabaseService -->
 <g id="node1" class="node">
-<title>PublisherService</title>
-<ellipse fill="#fdb462" stroke="black" cx="248" cy="-104" rx="76.44" ry="18"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">PublisherService</text>
+<title>DatabaseService</title>
+<ellipse fill="#fdb462" stroke="black" cx="333.5" cy="-104" rx="75.26" ry="18"/>
+<text text-anchor="middle" x="333.5" y="-99.8" font-family="Times,serif" font-size="14.00">DatabaseService</text>
 </g>
 <!-- PublisherModule -->
-<g id="node2" class="node">
+<g id="node3" class="node">
 <title>PublisherModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="304.43,-187 301.43,-191 280.43,-191 277.43,-187 191.57,-187 191.57,-151 304.43,-151 304.43,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">PublisherModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="304.93,-187 301.93,-191 280.93,-191 277.93,-187 192.07,-187 192.07,-151 304.93,-151 304.93,-187"/>
+<text text-anchor="middle" x="248.5" y="-164.8" font-family="Times,serif" font-size="14.00">PublisherModule</text>
+</g>
+<!-- DatabaseService&#45;&gt;PublisherModule -->
+<g id="edge1" class="edge">
+<title>DatabaseService&#45;&gt;PublisherModule</title>
+<path fill="none" stroke="black" d="M281.42,-117.15C281.42,-117.15 281.42,-140.69 281.42,-140.69"/>
+<polygon fill="black" stroke="black" points="277.92,-140.69 281.42,-150.69 284.92,-140.69 277.92,-140.69"/>
+</g>
+<!-- PublisherService -->
+<g id="node2" class="node">
+<title>PublisherService</title>
+<ellipse fill="#fdb462" stroke="black" cx="163.5" cy="-104" rx="76.44" ry="18"/>
+<text text-anchor="middle" x="163.5" y="-99.8" font-family="Times,serif" font-size="14.00">PublisherService</text>
 </g>
 <!-- PublisherService&#45;&gt;PublisherModule -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>PublisherService&#45;&gt;PublisherModule</title>
-<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
-<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
+<path fill="none" stroke="black" d="M216.13,-117.15C216.13,-117.15 216.13,-140.69 216.13,-140.69"/>
+<polygon fill="black" stroke="black" points="212.63,-140.69 216.13,-150.69 219.63,-140.69 212.63,-140.69"/>
 </g>
 </g>
 </svg>

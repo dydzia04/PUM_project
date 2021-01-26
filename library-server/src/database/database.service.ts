@@ -3,6 +3,9 @@ import { Firestore } from '@google-cloud/firestore';
 import firebase from 'firebase-admin';
 import { GoogleData } from '../google-data';
 
+/**
+ * Global service for connecting to database
+ */
 @Injectable()
 export class DatabaseService {
   /**
