@@ -5,9 +5,16 @@ import { BookModule } from './resources/book/book.module';
 import { AuthorModule } from './resources/author/author.module';
 import { PublisherModule } from './resources/publisher/publisher.module';
 import { UserModule } from './resources/user/user.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [BookModule, AuthorModule, PublisherModule, UserModule],
+  imports: [
+    BookModule,
+    AuthorModule,
+    PublisherModule,
+    UserModule,
+    DatabaseModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

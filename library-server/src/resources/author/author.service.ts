@@ -1,6 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateAuthorDto } from './dto/create-author.dto';
 import { UpdateAuthorDto } from './dto/update-author.dto';
+import { Firestore } from '@google-cloud/firestore';
+import { DatabaseService } from '../../database/database.service';
 
 /**
  * Service for authors operations passed to controller
@@ -8,26 +10,61 @@ import { UpdateAuthorDto } from './dto/update-author.dto';
 @Injectable()
 export class AuthorService {
   /**
+   * Firestore object reference used to connect to database
+   * @private
+   */
+  private database: Firestore;
+
+  /**
+   * Gets connection to database
+   * @param dbService
+   */
+  constructor(private dbService: DatabaseService) {
+    this.database = dbService.database;
+  }
+
+  /**
    * Method creating new author using given parameter
    * @param createAuthorDto
    */
-  create(createAuthorDto: CreateAuthorDto) {
-    return 'This action adds a new author';
+  async create(createAuthorDto: CreateAuthorDto) {
+    const author = await this.database
+      .collection('authors')
+      .add(createAuthorDto);
+
+    return { created: author.id };
   }
 
   /**
    * Method finding all authors
    */
-  findAll() {
-    return `This action returns all author`;
+  async findAll() {
+    const authors = [];
+    const snapshot = await this.database.collection('authors').get();
+
+    if (snapshot.empty) {
+      throw new HttpException('No Data', HttpStatus.NO_CONTENT);
+    }
+
+    snapshot.forEach((author) => {
+      const authorData = author.data();
+      authorData.id = author.id;
+      authors.push(authorData);
+    });
+
+    return authors;
   }
 
   /**
    * Method finding author by given parameter
    * @param id
    */
-  findOne(id: number) {
-    return `This action returns a #${id} author`;
+  async findOne(id: string) {
+    const author = await this.database.collection('authors').doc(id).get();
+    if (!author.exists) {
+      throw new HttpException('No Data', HttpStatus.NO_CONTENT);
+    }
+    return author.data();
   }
 
   /**
@@ -35,15 +72,26 @@ export class AuthorService {
    * @param id
    * @param updateAuthorDto
    */
-  update(id: number, updateAuthorDto: UpdateAuthorDto) {
-    return `This action updates a #${id} author`;
+  async update(id: string, updateAuthorDto: UpdateAuthorDto) {
+    const authorRef = this.database.collection('authors').doc(id);
+
+    const res = await authorRef.update(updateAuthorDto);
+
+    return { updated: res };
   }
 
   /**
    * Method deleting author using given parameter
    * @param id
    */
-  remove(id: number) {
-    return `This action removes a #${id} author`;
+  async remove(id: string) {
+    const author = await this.database.collection('authors').doc(id).get();
+
+    if (author.exists) {
+      await this.database.collection('authors').doc(id).delete();
+      return { success: 'Removed' };
+    } else {
+      throw new HttpException('NOT FOUND', HttpStatus.NOT_FOUND);
+    }
   }
 }

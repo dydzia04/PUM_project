@@ -5,14 +5,6 @@ import { ApiProperty } from '@nestjs/swagger';
  */
 export class CreateAuthorDto {
   /**
-   * ID of author
-   */
-  @ApiProperty({
-    description: 'ID of author',
-  })
-  id: number;
-
-  /**
    * First name of author
    */
   @ApiProperty({

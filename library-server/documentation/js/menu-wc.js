@@ -270,6 +270,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="classes/CreateUserDto.html" data-type="entity-link">CreateUserDto</a>
                             </li>
                             <li class="link">
+                                <a href="classes/GoogleData.html" data-type="entity-link">GoogleData</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/Publisher.html" data-type="entity-link">Publisher</a>
                             </li>
                             <li class="link">

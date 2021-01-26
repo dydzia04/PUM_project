@@ -12,7 +12,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('Library server')
     .setDescription('API for library app for PUM')
-    .setVersion('0.1')
+    .setVersion('0.2')
     .addTag('Books')
     .addTag('Authors')
     .addTag('Publishers')

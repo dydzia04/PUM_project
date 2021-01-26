@@ -5,14 +5,6 @@ import { ApiProperty } from '@nestjs/swagger';
  */
 export class CreatePublisherDto {
   /**
-   * ID of publisher
-   */
-  @ApiProperty({
-    description: 'ID of publisher',
-  })
-  id: number;
-
-  /**
    * Name of publisher
    */
   @ApiProperty({
